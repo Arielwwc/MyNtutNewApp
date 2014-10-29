@@ -2,12 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>大大安安想去哪？</title>
+<title>NEKONEKO</title>
 <style type="text/css">
 body {
-	background-image: url();
+	background-image: url(images/3.jpg);
 	background-repeat: repeat;
-	
 }
 html, body , .outer, .inner {
     height:100%;
@@ -22,35 +21,53 @@ html, body , .outer, .inner {
 <script type="text/javascript">
 function AlertIt(){
 	//亂數
-	var myrandom = Math.round(Math.random()*2)
+	var myrandom=Math.round(Math.random()*5)
 	//一些白痴的話，用矩陣 Array
-	var messages = new Array()
-	messages[0] = "大大安安，想怎樣？"
-	messages[1] = "今天天氣好，想怎樣？"
-	messages[2] = "無聊嗎？來看影片～"
+	//訊息清單~~~message"s"~~～s要注意
+	var messages=new Array()
+	messages[0]="什麼？Google一下～"
+	messages[1]="去看展覽吧？"
+	messages[2]="看影片嗎？"
+	messages[3]="想養貓咪嗎？認養吧"
+	messages[4]="注意一下天氣囉～～"
+	messages[5]="News Headline!!!!!"
 	//連結清單
-	var links = new Array()
-	links[0] = "http://www.google.com"
-	links[1] = "http://www.yahoo.com"
-	links[2] = "http://www.youtube.com"
-	links[3] = "http://www.ntut.edu.tw"
+	var links=new Array()
+	links[0]="http://www.google.com"
+	links[1]="http://www.tfam.taipei.gov.tw"
+	links[2]="http://www.youtube.com"
+	links[3]="http://www.cats.org.uk/index.aspx"
+	links[4]="https://weather.yahoo.com"
+	links[5]="http://edition.cnn.com"
+	links[6]="http://youtu.be/hfAkr4F7p40"
+	
 	//呼叫確認視窗
-	var answer = confirm(messages[myrandom])
+	//點下去要顯示
+	var answer = confirm (messages[myrandom])
+	
 	//重點來了，如果點「是」，就連去該變數所指的網站
-	if (answer){
-		window.location = links[myrandom]
-	} 
+	//如果點「否」～～驚歎號！+ answer~~
+	if (!answer)
+	window.location=links[6]
+	
+	//如果點「是」前往後頭網頁
+	if (answer)
+	window.location=links[myrandom]
 }
 </script>
 
 <table width="100%" height ="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td align="center" valign="middle">
-		<p>Hello, world. - from JC ;) 揪瞇</p>
-		<a href="javascript:AlertIt();">
-			<img src="images/dAbHead.png" width="33%" height="auto">
-			<p>按我</p>
-		</a>
+		<p>Neko neko. <a href="media.html">blah blah blah~ </p></a>
+        
+      <a href="javascript:AlertIt();">
+        <img src="images/aaa-01.png" width=508 height=319>
+      <p>Click</p>
+      </a>
+
+        
+        
 	</td>
   </tr>
 </table>
