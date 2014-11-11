@@ -3,99 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>NEKONEKO</title>
- <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
- 
- <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
-        //
-        document.addEventListener("deviceready", onDeviceReady, false);
-
-        // Cordova is ready
-        //
-        function onDeviceReady() {
-            playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
-        }
-
-        // Audio player
-        //
-        var my_media = null;
-        var mediaTimer = null;
-
-        // Play audio
-        //
-        function playAudio(src) {
-            if (my_media == null) {
-                // Create Media object from src
-                my_media = new Media(src, onSuccess, onError);
-            } // else play current audio
-            // Play audio
-            my_media.play();
-
-            // Update my_media position every second
-            if (mediaTimer == null) {
-                mediaTimer = setInterval(function() {
-                    // get my_media position
-                    my_media.getCurrentPosition(
-                        // success callback
-                        function(position) {
-                            if (position > -1) {
-                                setAudioPosition((position) + " sec");
-                            }
-                        },
-                        // error callback
-                        function(e) {
-                            console.log("Error getting pos=" + e);
-                            setAudioPosition("Error: " + e);
-                        }
-                    );
-                }, 1000);
-            }
-        }
-
-        // Pause audio
-        // 
-        function pauseAudio() {
-            if (my_media) {
-                my_media.pause();
-            }
-        }
-
-        // Stop audio
-        // 
-        function stopAudio() {
-            if (my_media) {
-                my_media.stop();
-            }
-            clearInterval(mediaTimer);
-            mediaTimer = null;
-        }
-
-        // onSuccess Callback
-        //
-        function onSuccess() {
-            console.log("playAudio():Audio Success");
-        }
-
-        // onError Callback 
-        //
-        function onError(error) {
-            alert('code: '    + error.code    + '\n' + 
-                  'message: ' + error.message + '\n');
-        }
-
-        // Set audio position
-        // 
-        function setAudioPosition(position) {
-            document.getElementById('audio_position').innerHTML = position;
-        }
-
-        </script>
- 
+<link rel="stylesheet" type="text/css" href="../desk/NTUT/7-行動裝置－葛/11.04/MyNtutNewApp/css/csshake.min.css">
+<link type="text/css" href="../desk/NTUT/7-行動裝置－葛/11.04/MyNtutNewApp/css/csshake.min.css">
+<embed src="http://goo.gl/69E6ja" autostart="true" hidden="true" loop="800" volume="100" ></embed>
 
 <style type="text/css">
 body {
-	background-image: url(images/3.jpg);
+	background-image: url(../desk/NTUT/7-%E8%A1%8C%E5%8B%95%E8%A3%9D%E7%BD%AE%EF%BC%8D%E8%91%9B/11.04/MyNtutNewApp/images/3.jpg);
 	background-repeat: repeat;
 }
 html, body , .outer, .inner {
@@ -104,15 +19,13 @@ html, body , .outer, .inner {
     margin:0;
 } 
 </style>
-
-
-
-        
-        
 </head>
+        
+ 
+        
+
 
 <body>
-
 <script type="text/javascript">
 function AlertIt(){
 	//亂數
@@ -151,24 +64,50 @@ function AlertIt(){
 }
 </script>
 
-<table width="100%" height ="100%" border="0" cellspacing="0" cellpadding="0">
+<table width="100%" height ="50%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td align="center" valign="middle">
 		<p>Neko neko. <a href="media.html">blah blah blah~ </p></a>
-        
-          <div class="shake shake-slow">
-      <a href="javascript:AlertIt();">
-        <img src="images/aaa-01.png" width=508 height=319>
-      <p>Click</p>
+    <div class="shake shake-slow">
+      <a href="javascript:AlertIt();">      
+        <img src="../desk/NTUT/7-行動裝置－葛/11.04/MyNtutNewApp/images/aaa-01.png" width=508 height=319>        
+        </dive>      
+      <br>Click</br>
       </a>
-      
-          </div>
-        
-        
 	</td>
   </tr>
 </table>
 
+<style> 
+div {
+    background: ;
+    position: relative;(100,20);
+    -webkit-animation: myfirst 3s linear 1s infinite alternate; /* Chrome, Safari, Opera */
+    animation: myfirst 3s linear 1s infinite alternate;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    0%   {background: left:0px; top:50px;}
+    25%  {background: left:50px; top:0px;}
+    50%  {background: left:0px; top:50px;}
+    75%  {background: left:50px; top:0px;}
+    100% {background:; left:0px; top:50px;}
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+    0%   {background: left:0px; top:50px;}
+    25%  {background: left:50px; top:0px;}
+    50%  {background: left:0px; top:50px;}
+    75%  {background: left:50px; top:0px;}
+    100% {background: left:0px; top:50px;}
+}
+</style>
+
+
+
+
 
 </body>
+
 </html>
